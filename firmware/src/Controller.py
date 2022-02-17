@@ -106,7 +106,8 @@ class Controller:
             pitch_compensation = correction_factor * np.clip(pitch, -max_tilt, max_tilt)
             rmat = euler2mat(roll_compensation, pitch_compensation, 0)
 
-            rotated_foot_locations = rmat.T @ rotated_foot_locations + location_offsets
+            rotated_foot_locations = rmat.T @ rotated_foot_locations + np.array([0, 0, -0.06])[:, np.newaxis]
+            # + location_offsets
 
             state.joint_angles = self.inverse_kinematics(
                 rotated_foot_locations, self.config

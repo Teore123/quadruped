@@ -28,7 +28,7 @@ def consoleClear():
 
 def main(id ,command_status):
 
-    arduino = ArduinoSerial('COM4')  # need to specify the serial port
+    #arduino = ArduinoSerial('COM4')  # need to specify the serial port
 
     # Create config
     config = Configuration()
@@ -121,7 +121,7 @@ def main(id ,command_status):
         print(deg_angle)
 
 
-        arduino.serialSend(deg_angle[: ,0] ,deg_angle[: ,1] ,deg_angle[: ,2] ,deg_angle[: ,3])
+        #arduino.serialSend(deg_angle[: ,0] ,deg_angle[: ,1] ,deg_angle[: ,2] ,deg_angle[: ,3])
         consoleClear()
 
 

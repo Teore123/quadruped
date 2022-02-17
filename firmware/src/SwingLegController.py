@@ -30,7 +30,8 @@ class SwingController:
             if swing_phase < 0.5:
                 swing_height_ = swing_phase / 0.5 * self.config.z_clearance
             else:
-                swing_height_ = self.config.z_clearance * (1 - (swing_phase - 0.5) / 0.5)
+                swing_height_ = self.config\
+                                    .z_clearance * (1 - (swing_phase - 0.5) / 0.5)
         return swing_height_
 
 
